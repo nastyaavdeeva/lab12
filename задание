@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void swap2(int *a, int *b) {
+    if (*a < *b) {
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+    } else {
+        *a = *a; 
+        *b = *b;
+    }
+}
+
+int main() {
+    int x = -199, y = 100;
+    int *p = &x;
+    printf("Before: %d %d\n", x, y);
+    printf("Value through p: %d\n", *p);
+    swap2(&x, &y);
+    printf("After: %d %d\n", x, y);
+    printf("Value through p: %d\n", *p);
+    return 0;
+}
